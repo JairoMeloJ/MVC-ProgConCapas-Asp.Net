@@ -1,0 +1,26 @@
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Datos.dll.config
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\EntityFramework.dll
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Entidad.dll.config
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\EntityFramework.xml
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\johan\source\repos\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.csprojAssemblyReference.cache
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Datos.dll.config
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Entidad.dll
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Entidad.pdb
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\bin\Debug\Capa_Entidad.dll.config
+C:\Users\Servidor\Desktop\Intento #10\MVC+CapasG3\Capa_Datos\obj\Debug\Capa_Datos.csproj.CopyComplete

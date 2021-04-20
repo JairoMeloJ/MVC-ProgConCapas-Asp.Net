@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdministradorDeCamposModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Siglas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empleados" Relationship="Self.FK__Empleados__IDDep__267ABA7A" FromRole="Departamento" ToRole="Empleados" />
+  </EntityType>
+  <EntityType Name="Documentos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Empleado" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DepartamentoOrigen" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="DepartamentoDestino" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Secuencia" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empleados" Relationship="Self.FK__Documento__Emple__29572725" FromRole="Documentos" ToRole="Empleados" />
+  </EntityType>
+  <EntityType Name="Empleados">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IDDepartamento" Type="Int32" />
+    <Property Name="Cargo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Departamento" Relationship="Self.FK__Empleados__IDDep__267ABA7A" FromRole="Empleados" ToRole="Departamento" />
+    <NavigationProperty Name="Documentos" Relationship="Self.FK__Documento__Emple__29572725" FromRole="Empleados" ToRole="Documentos" />
+  </EntityType>
+  <Association Name="FK__Empleados__IDDep__267ABA7A">
+    <End Role="Departamento" Type="Self.Departamento" Multiplicity="0..1" />
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Empleados">
+        <PropertyRef Name="IDDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Documento__Emple__29572725">
+    <End Role="Empleados" Type="Self.Empleados" Multiplicity="0..1" />
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleados">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Documentos">
+        <PropertyRef Name="Empleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AdministradorDeCamposEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Departamento" EntityType="Self.Departamento" />
+    <EntitySet Name="Documentos" EntityType="Self.Documentos" />
+    <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+    <AssociationSet Name="FK__Empleados__IDDep__267ABA7A" Association="Self.FK__Empleados__IDDep__267ABA7A">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="Empleados" EntitySet="Empleados" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Documento__Emple__29572725" Association="Self.FK__Documento__Emple__29572725">
+      <End Role="Empleados" EntitySet="Empleados" />
+      <End Role="Documentos" EntitySet="Documentos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

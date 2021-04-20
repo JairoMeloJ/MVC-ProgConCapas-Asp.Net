@@ -1,0 +1,26 @@
+﻿@model Capa_Entidad.Empleados
+
+
+<div class="section animated-row" data-section="slide01">
+    <div class="section-inner">
+        <h2>Borrando Departamento</h2>
+
+        <h3>¿Esta seguro que desea eliminar este Empleado?</h3>
+        <hr />
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+                    <br /><br />
+                </div>
+            </div>
+
+            <input type="submit" value="Eliminar Empleado" class="btn" />
+        }
+    </div>
+</div>

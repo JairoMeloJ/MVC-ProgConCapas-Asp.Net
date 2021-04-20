@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Capa_Entidad.Documentos>
+
+@{
+    ViewBag.Title = "Mostrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="section animated-row" data-section="slide01">
+    <div class="section-inner">
+        <div class="welcome-box">
+            <label class="welcome-first animate">Documentos</label>
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Tipo)
+                    </th>
+                    <th>
+                        Origen
+                    </th>
+                    <th>
+                        Destino
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.fecha)
+                    </th>
+                    <th></th>
+                </tr>
+
+               @foreach (var campo in Model)
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => campo.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => campo.Tipo)
+                </td>
+                <td>
+                    Departamento Origen
+                </td>
+                <td>
+                    Departamento Destino
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => campo.fecha)
+                </td>
+            </tr>
+                }
+
+            </table>
+        </div>
+        <a href="~/Documentos/Create" class="btn">Crear nuevo Documento</a>
+    </div>
+</div>

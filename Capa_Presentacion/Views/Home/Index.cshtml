@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNet.Identity
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <div class="section animated-row" data-section="slide03">
+        <div class="section-inner">
+            <div class="welcome-box">
+                <span class="welcome-first animate" data-animate="fadeInUp"> @Html.ActionLink("Bienvenido " + User.Identity.GetUserName() + " !", "Index", "Manage", htmlAttributes: new { title = "Manage" }) </span>
+
+                <style type="text/css">
+                    a:link, a:visited, a:active {
+                        text-decoration: none;
+                    }
+                </style>
+
+                <h2 class="welcome-title animate" data-animate="fadeInUp">Yo soy Jairo</h2>
+                <p class="animate" data-animate="fadeInUp">Un joven de 19 años en su cuarto cuatrimestre del Instituto Tecnologico de las Americas, presentando su Sistema de transparencia y calidad...</p>
+            </div>
+        </div>
+    </div>

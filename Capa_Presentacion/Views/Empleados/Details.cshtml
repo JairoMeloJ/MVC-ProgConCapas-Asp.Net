@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Capa_Entidad.Empleados>
+
+@{
+    ViewBag.Title = "Mostrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="section animated-row" data-section="slide01">
+    <a href="~/Empleados/Create" class="btn">Agregar nuevo Empleado</a>
+    <div class="section-inner">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Correo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cargo)
+                </th>
+                <th>
+                    ID de Departamento
+                </th>
+            </tr>
+
+            @foreach (var campos in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => campos.ID)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => campos.Nombre)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => campos.Correo)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => campos.Cargo)
+                       
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => campos.IDDepartamento)
+                    </td>
+                </tr>
+            }
+        </table>
+        <a href="~/Empleados/Edit" class="btn">Editar</a>
+        <a href="~/Empleados/Delete" class="btn">Eliminar</a>
+    </div>
+</div>

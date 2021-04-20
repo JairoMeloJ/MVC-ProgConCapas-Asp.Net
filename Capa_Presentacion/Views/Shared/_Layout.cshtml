@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <title>@ViewBag.Title - JM-Transparencia</title>
+
+    @Styles.Render("~/Content/css/bootstrap.min.css")
+    @Styles.Render("~/Content/css/font-awesome.css")
+    @Styles.Render("~/Content/css/fullpage.min.css")
+    @Styles.Render("~/Content/css/owl.carousel.css")
+    @Styles.Render("~/Content/css/animate.css")
+    @Styles.Render("~/Content/css/templatemo-style.css")
+    @Styles.Render("~/Content/css/responsive.css")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="video">
+        <div class="preloader">
+            <div class="preloader-bounce">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <header id="header">
+            <div class="container-fluid">
+                <div class="navbar">
+                    <a href="/Home/Index" id="logo" title="JM-Transparencia">
+                        JM-Transparencia
+                    </a>
+                    <div class="navigation-row">
+                        <nav id="navigation">
+                            <button type="button" class="navbar-toggle"> <i class="fa fa-bars"></i> </button>
+                            <div class="nav-box navbar-collapse">
+                                <ul class="navigation-menu nav navbar-nav navbars" id="nav">
+
+                                    <li data-menuanchor="slide01" class="active"><a href="#slide01">Accion</a></li>
+                                    <li data-menuanchor="slide03"><a href="#slide03">Servicios</a></li>
+                                    <li data-menuanchor="slide04"><a href="#slide04">Ventajas</a></li>
+                                    <li data-menuanchor="slide05"><a href="#slide05">Sobre mi</a></li>
+                                    <li data-menuanchor="slide06"><a href="#slide06">Mis trabajos</a></li>
+                                    <li data-menuanchor="slide07"><a href="#slide07">Contactos</a></li>
+
+                                    @Html.Partial("_LoginPartial")
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="social-icons">
+            <div class="text-right">
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/jairograbiel.melojimenez/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/JairoMe73301708" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.linkedin.com/feed/" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/jairogabriel_/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <video autoplay muted loop id="myVideo">
+            <source src="~/Content/images/video-fondo.mp4" type="video/mp4">
+        </video>
+
+        <div id="fullpage" class="fullpage-default">
+
+            <div class="section animated-row" data-section="slide01">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <center>
+                                    @RenderBody()
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide02">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Servicios</span>
+                                <h2>Que obtendras con esta pagina</h2>
+                            </div>
+                            <div class="services-section">
+                                <div class="services-list owl-carousel">
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <form>
+                                            <a href="~/Empleados/Details">
+                                                <div class="service-box" style="text-decoration:none;">
+                                                    <span class="service-icon"><i class="fa fa-cloud" aria-hidden="true" style="color: black;"></i></span>
+                                                    <h3 style="color: black;">Almacenado de empleados</h3>
+                                                    <p style="color: black;">Almacenado de empleados y administracion de los mismos, guardado de su informacion e acciones en la empresa.</p>
+                                                </div>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <form>
+                                            <a href="~/Documentos/Details">
+                                                <div class="service-box" style="text-decoration:none;">
+                                                    <span class="service-icon"><i class="fa fa-bookmark" aria-hidden="true" style="color: black;"></i></span>
+                                                    <h3 style="color: black;">Creacion de Documentos</h3>
+                                                    <p style="color: black;">Creacion, almacenado, modificacion e contabilidad de documentos por medio de base de datos.</p>
+                                                </div>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <form>
+                                            <a href="~/Departamento/Details">
+                                                <div class="service-box" style="text-decoration:none;">
+                                                    <span class="service-icon"><i class="fa fa-bell" aria-hidden="true" style="color: black;"></i></span>
+                                                    <h3 style="color: black;">Creacion de departamentos</h3>
+                                                    <p style="color: black;">Creacion, almacenado y modificacion de distintos departamentos por medio de base de datos.</p>
+                                                </div>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <a href="~/Reporte/Details">
+                                            <div class="service-box" style="text-decoration:none;">
+                                                <span class="service-icon"><i class="fa fa-desktop" aria-hidden="true" style="color: black;"></i></span>
+                                                <h3 style="color: black;">Creacion de reportes</h3>
+                                                <p style="color: black;">Creacion, almacenado, modificacion e contabilidad de distintos reportes.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <a href="~/Manage/Index">
+                                            <div class="service-box" style="text-decoration:none;">
+                                                <span class="service-icon"><i class="fa fa-database" aria-hidden="true" style="color: black;"></i></span>
+                                                <h3 style="color: black;">Creacion y administracion de cuentas</h3>
+                                                <p style="color: black;">Creacion y administracion de cuentas, posibilidad de modificar sus datos ya sea nombre, contraseña e incluso agregar una verificacion de dos pasos para mas seguridad.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <a href="#slide07">
+                                            <div class="service-box" style="text-decoration:none;">
+                                                <span class="service-icon"><i class="fa fa-comments" aria-hidden="true" style="color: black;"></i></span>
+                                                <h3 style="color: black;">Facil comunicacion</h3>
+                                                <p style="color: black;">Las redes y formas de contacto de la empresa al final de la pagina, con los cuales pueden contactar con un Administrador facilmente.</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll-down next-section animate data-animate=" fadeInUp""><img src="~/Content/images/mouse-scroll.png" alt=""><span>Sigue bajando</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide03">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Ventajas</span>
+                                <h2>¿Porque escogernos?</h2>
+                            </div>
+                            <div class="skills-row animate" data-animate="fadeInDown">
+                                <div class="row">
+                                    <div class="col-md-8 offset-md-2">
+                                        <div class="skill-item">
+                                            <h6> Comunicacion </h6>
+                                            <div class="skill-bar">
+                                                <span> 95%</span>
+                                                <div class="filled-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <h6> Diseño </h6>
+                                            <div class="skill-bar">
+                                                <span> 100%</span>
+                                                <div class="filled-bar-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item">
+                                            <h6> Redes Sociales </h6>
+                                            <div class="skill-bar">
+                                                <span> 80%</span>
+                                                <div class="filled-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="skill-item last-skill">
+                                            <h6> Base de Datos </h6>
+                                            <div class="skill-bar">
+                                                <span> 100%</span>
+                                                <div class="filled-bar-2"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide04">
+                <div class="section-inner">
+                    <div class="about-section">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 wide-col-laptop">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="about-contentbox">
+                                            <div class="animate" data-animate="fadeInUp">
+                                                <span>Sobre mi</span>
+                                                <h2>¿Quien Soy?</h2>
+                                                <p>Un apasionado a los deportes extremos, la musica y los videojuegos... <br>Loco por seguir estudiando para obtener la experiencia necesaria para explotar su potencial al explorar el mercado laboral.</p>
+                                            </div>
+                                            <div class="facts-list owl-carousel">
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-trophy counter-icon" aria-hidden="true"></i><span class="count-number">19</span> Años
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-graduation-cap counter-icon" aria-hidden="true"></i><span class="count-number">4</span> Cuatrimestres
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-desktop counter-icon" aria-hidden="true"></i><span class="count-number">3</span> Lenguajes Dominados
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-support counter-icon" aria-hidden="true"></i><span class="count-number">3</span> Tecnologias Dominadas
+                                                    </div>
+                                                </div>
+                                                <div class="item animate" data-animate="fadeInUp">
+                                                    <div class="counter-box">
+                                                        <i class="fa fa-certificate counter-icon" aria-hidden="true"></i><span class="count-number">3.7</span> Promedio Universitario
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <figure class="about-img animate" data-animate="fadeInUp"><img src="~/Content/images/Cabeza.jpeg" class="rounded" alt=""></figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide05">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Mis trabajos</span>
+                                <h2>Proyectos terminados</h2>
+                            </div>
+                            <div class="gallery-section">
+                                <div class="gallery-list owl-carousel">
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-01.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Formulario de Login</h4>
+                                                <p>Formulario basico con sus verificaciones javascript, basado en html5 con css personalizado.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-02.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Calculadora C#</h4>
+                                                <p>Calculadora aritmetica basica realizada en C#, diseño minimalista y con un diseño centrado al usuario.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-03.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Reproductor de audios y videos</h4>
+                                                <p>Reproductor mp3 y mp4 realizado en C#, diseño conocido centrado al facil entendimiento de los usuarios.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-4.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Navegador C#</h4>
+                                                <p>Un navegador simple, compatible con cualquier pagina y con un diseño elegante centrada al usuario.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-5.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Bot Instagram Python</h4>
+                                                <p>Un bot centrado a facilitar o dar mas probabilidad de ganar en giveaways de instagram, construido en python con selenium.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-6.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Contabilidad de Registros C#</h4>
+                                                <p>Una pequeña aplicacion en la cual se almacenan estudiantes en una lista para luego poder consultarlos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-7.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>Galeria Telefonica con React</h4>
+                                                <p>Es una agenda telefónica sencilla creada en React con un buscador para filtrar la información que queramos.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-2.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>templatemo is the best</h4>
+                                                <p>Please tell your friends about it. Templatemo is the best website to download free Bootstrap templates.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item animate" data-animate="fadeInUp">
+                                        <div class="portfolio-item">
+                                            <div class="thumb">
+                                                <img src="~/Content/images/item-3.jpg" alt="">
+                                            </div>
+                                            <div class="thumb-inner animate" data-animate="fadeInUp">
+                                                <h4>templatemo is the best</h4>
+                                                <p>Please tell your friends about it. Templatemo is the best website to download free Bootstrap templates.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <a href="https://github.com/JairoMeloJ" target="_blank">
+                        <div class="scroll-down next-section animate data-animate">
+                            <img src="~/Content/images/mouse-scroll.png" alt="GitHub"><span>Link a Github</span>
+                            <style type="text/css">
+                                a:link, a:visited, a:active {
+                                    text-decoration: none;
+                                }
+                            </style>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section animated-row" data-section="slide06">
+                <div class="section-inner">
+                    <div class="row justify-content-center">
+                        <div class="col-md-7 wide-col-laptop">
+                            <div class="title-block animate" data-animate="fadeInUp">
+                                <span>Contactame</span>
+                                <h2>Con un toque!</h2>
+                            </div>
+                            <div class="contact-section">
+                                <div class="row">
+                                    <div class="col-md-6 animate" data-animate="fadeInUp">
+                                        <div class="contact-box">
+                                            <div class="contact-row">
+                                                <i class="fa fa-map-marker"></i> Peaton 2 #7 INVI, Santo Domingo Distrito Nacional
+                                            </div>
+                                            <div class="contact-row">
+                                                <i class="fa fa-phone"></i> +1 (849) 456-4640
+                                            </div>
+                                            <div class="contact-row">
+                                                <i class="fa fa-envelope"></i> 20198625@itla.edu.do
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 animate" data-animate="fadeInUp">
+                                        <form id="ajax-contact" method="post" action="#">
+                                            <div class="input-field">
+                                                <input type="text" class="form-control" name="name" id="name" required placeholder="Nombre">
+                                            </div>
+                                            <div class="input-field">
+                                                <input type="email" class="form-control" name="email" id="email" required placeholder="Correo">
+                                            </div>
+                                            <div class="input-field">
+                                                <textarea class="form-control" name="message" id="message" required placeholder="Mensaje"></textarea>
+                                            </div>
+                                            <button class="btn" type="submit">Enviar</button>
+                                        </form>
+                                        <div id="form-messages" class="mt-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/fullpage.min.js"></script>
+    <script src="~/Content/js/scrolloverflow.js"></script>
+    <script src="~/Content/js/owl.carousel.min.js"></script>
+    <script src="~/Content/js/jquery.inview.min.js"></script>
+    <script src="~/Content/js/form.js"></script>
+    <script src="~/Content/js/custom.js"></script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
